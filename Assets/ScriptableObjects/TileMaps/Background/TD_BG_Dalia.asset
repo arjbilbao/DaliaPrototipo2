@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27b06227429034f41b2223304528814f, type: 3}
+  m_Name: TD_BG_Dalia
+  m_EditorClassIdentifier: 
+  tiles:
+  - {fileID: 11400000, guid: 7e48c18b4e0c454499e29cc6bab99dbe, type: 2}
+  - {fileID: 11400000, guid: 2799c0339d269334d94b8f9f71652fc7, type: 2}
+  - {fileID: 11400000, guid: 6c5c65b5877d67d4bba3976f7622f2cf, type: 2}
+  - {fileID: 11400000, guid: 20ac6ac88efed77419b6c4bc0a41807e, type: 2}
+  - {fileID: 11400000, guid: 946941df0683158459d7dc69267f18d8, type: 2}
+  - {fileID: 11400000, guid: dd374075844c7d440a9cf57aa92600c1, type: 2}
+  - {fileID: 11400000, guid: f3b5387ad8a43c041b29b764a981918b, type: 2}
+  - {fileID: 11400000, guid: 4e8faca26bee5034bbfb377a9be16ad9, type: 2}
