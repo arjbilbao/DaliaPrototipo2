@@ -10,5 +10,5 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8ad2bd41e4ecff043820150a4afd2c88, type: 3}
-  m_Name: Basement1Entrance
+  m_Name: ClockTowerToBasement1Entrance
   m_EditorClassIdentifier: 

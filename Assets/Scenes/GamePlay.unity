@@ -339,7 +339,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e328a17d92fdc54c80ded696590ba2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameStateChangedEvent: {fileID: 0}
+  gameStateChangedEvent: {fileID: 11400000, guid: fa74a12beee2bf5458e185c47cad31fb, type: 2}
   components: []
   enabledStates: []
   disabledStates: []
