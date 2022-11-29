@@ -47,12 +47,20 @@ public class TileMapManager : MonoBehaviour
     {
         AlterChanges=false;
 
-        Player = GameObject.FindWithTag("Player");
+
+         Player= GameObject.FindWithTag("DefaultEntrance");
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+                if(GameObject.FindWithTag("Player")!=null)
+                {
+                    Player = GameObject.FindWithTag("Player");
+                }
+                
+                
                 if(AlterChanges)
                 {
                         AlterChanges=false;

@@ -411,6 +411,7 @@ MonoBehaviour:
   targetFrequncy: 5
   grapplePoint: {x: 0, y: 0}
   grappleDistanceVector: {x: 0, y: 0}
+  breakable: 0
 --- !u!1 &310630455844753147
 GameObject:
   m_ObjectHideFlags: 0
@@ -487,6 +488,8 @@ GameObject:
   - component: {fileID: 310630455912580381}
   - component: {fileID: 310630455912580380}
   - component: {fileID: 310630455912580383}
+  - component: {fileID: 9106249753736053252}
+  - component: {fileID: 5631390486970106737}
   m_Layer: 2
   m_Name: MainPlayerObject
   m_TagString: Player
@@ -616,7 +619,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47d1645349cbb444697a6f913c34a3be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GSC: {fileID: 9106249753736053252}
+  _paused: 0
+  _pausedStated: {fileID: 11400000, guid: 6160977ccb6780d4f93d7d995002c6d5, type: 2}
   GAA: {fileID: 11400000, guid: 91f7b91ee3063c440a7312b33aba083a, type: 2}
+  grappling: {fileID: 0}
   speed: 150
   _climbingSpeed: 50
   groundCheck: {fileID: 310630454299972923}
@@ -684,6 +691,59 @@ SpringJoint2D:
   m_Distance: 0.31186485
   m_DampingRatio: 1
   m_Frequency: 1
+--- !u!114 &9106249753736053252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 310630455912580358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 336ec49c844319e478c25c2067f0ff82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager: {fileID: 11400000, guid: 463cdd48be31cb64390f5a9163c1a6c9, type: 2}
+--- !u!114 &5631390486970106737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 310630455912580358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e328a17d92fdc54c80ded696590ba2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameStateChangedEvent: {fileID: 11400000, guid: fa74a12beee2bf5458e185c47cad31fb, type: 2}
+  components: []
+  enabledStates: []
+  disabledStates: []
+  onMainMenuState:
+    m_PersistentCalls:
+      m_Calls: []
+  onLoadingState:
+    m_PersistentCalls:
+      m_Calls: []
+  onPlayingState:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 310630455912580381}
+        m_TargetAssemblyTypeName: MainPlayerController, Assembly-CSharp
+        m_MethodName: BackFromPause
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onPauseState:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &310630455941345888
 GameObject:
   m_ObjectHideFlags: 0

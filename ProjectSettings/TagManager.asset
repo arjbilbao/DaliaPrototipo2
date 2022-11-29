@@ -12,6 +12,7 @@ TagManager:
   - Foot
   - Lamp
   - GrapplePoint
+  - DefaultEntrance
   layers:
   - Default
   - TransparentFX
