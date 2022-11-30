@@ -201,9 +201,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1259712596}
   - component: {fileID: 1259712595}
-  - component: {fileID: 1259712599}
   - component: {fileID: 1259712598}
   - component: {fileID: 1259712597}
+  - component: {fileID: 1259712599}
+  - component: {fileID: 1259712600}
   m_Layer: 0
   m_Name: Door
   m_TagString: Door
@@ -319,12 +320,36 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1259712599}
-        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
-        m_MethodName: LoadScene
-        m_Mode: 1
+        m_TargetAssemblyTypeName: GameStateChanger, Assembly-CSharp
+        m_MethodName: SetGameState
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: 6f111347a3204824b9937a80fc49ef06, type: 2}
+          m_ObjectArgumentAssemblyTypeName: GameStateSO, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1259712600}
+        m_TargetAssemblyTypeName: DoorManager, Assembly-CSharp
+        m_MethodName: SetDoorScene
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: daabcc2b253c756438883028d4d61445, type: 2}
+          m_ObjectArgumentAssemblyTypeName: SceneSO, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1259712600}
+        m_TargetAssemblyTypeName: DoorManager, Assembly-CSharp
+        m_MethodName: SetDoorLevelEntrance
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: e1d7891fa53aeba4eb1f3a43edafbade, type: 2}
+          m_ObjectArgumentAssemblyTypeName: LevelEntranceSO, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -335,7 +360,19 @@ MonoBehaviour:
       m_Calls: []
   onTriggerExit:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1259712599}
+        m_TargetAssemblyTypeName: GameStateChanger, Assembly-CSharp
+        m_MethodName: SetGameState
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 14d292f29ba46534cb8c52dc1d775d2a, type: 2}
+          m_ObjectArgumentAssemblyTypeName: GameStateSO, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1259712599
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -345,14 +382,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 1259712594}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afb1e2cc8a686c44c827e94279bd4ac4, type: 3}
+  m_Script: {fileID: 11500000, guid: 336ec49c844319e478c25c2067f0ff82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: {fileID: 11400000, guid: daabcc2b253c756438883028d4d61445, type: 2}
-  levelEntrance: {fileID: 0}
-  loadingScreen: 1
-  playerPath: {fileID: 11400000, guid: fe890c5c455ffa641a791a5187bdc36d, type: 2}
-  loadSceneEvent: {fileID: 11400000, guid: 4f10557af7e0f3145b2f9ee86504bacf, type: 2}
+  gameManager: {fileID: 11400000, guid: 463cdd48be31cb64390f5a9163c1a6c9, type: 2}
+--- !u!114 &1259712600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1259712594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0874f78dff245874ba57185926083032, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _DoorSO: {fileID: 11400000, guid: f08292210b6b341448559ab427e44605, type: 2}
 --- !u!4 &1304099770 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 331796478951006118, guid: e70b37b987df9124facb54e797cf7598, type: 3}
@@ -440,7 +486,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1605619007}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.46, y: 0, z: 0}
+  m_LocalPosition: {x: -0.13, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1304099770}
