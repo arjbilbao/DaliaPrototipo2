@@ -20,5 +20,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Basement2.unity
     guid: e298e253ca742cb4f89b63977fd3e3bf
+  - enabled: 1
+    path: Assets/Scenes/Office.unity
+    guid: 1f9e2addf463c764d9cd1903f4b40784
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 3eb0b08691f96784f9e2ad39a502d170, type: 2}
