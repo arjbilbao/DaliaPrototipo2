@@ -589,6 +589,28 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5576865313209386700, guid: 7df800af4e561a645b11a5b502b86814, type: 3}
   m_PrefabInstance: {fileID: 5576865312361255574}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1393396295 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5893578121279729654, guid: dfcda70424665594cb6d083bc3d9ba30, type: 3}
+  m_PrefabInstance: {fileID: 1508636560472317021}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1ee4715ab821724381aa032f83e2a92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1393396296 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4982655632629494696, guid: dfcda70424665594cb6d083bc3d9ba30, type: 3}
+  m_PrefabInstance: {fileID: 1508636560472317021}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afb1e2cc8a686c44c827e94279bd4ac4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1622817434
 GameObject:
   m_ObjectHideFlags: 0
@@ -681,6 +703,58 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1041597441}
     m_Modifications:
+    - target: {fileID: 4982655632629494693, guid: dfcda70424665594cb6d083bc3d9ba30, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4982655632629494693, guid: dfcda70424665594cb6d083bc3d9ba30, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4982655632629494693, guid: dfcda70424665594cb6d083bc3d9ba30, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4982655632629494693, guid: dfcda70424665594cb6d083bc3d9ba30, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1393396295}
+    - target: {fileID: 4982655632629494693, guid: dfcda70424665594cb6d083bc3d9ba30, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1393396296}
+    - target: {fileID: 4982655632629494693, guid: dfcda70424665594cb6d083bc3d9ba30, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4982655632629494693, guid: dfcda70424665594cb6d083bc3d9ba30, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenAndClosedDoor
+      objectReference: {fileID: 0}
+    - target: {fileID: 4982655632629494693, guid: dfcda70424665594cb6d083bc3d9ba30, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: LoadScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 4982655632629494693, guid: dfcda70424665594cb6d083bc3d9ba30, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: OpenDoorButton, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4982655632629494693, guid: dfcda70424665594cb6d083bc3d9ba30, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: SceneLoader, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4982655632629494693, guid: dfcda70424665594cb6d083bc3d9ba30, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4982655632629494693, guid: dfcda70424665594cb6d083bc3d9ba30, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4982655632629494693, guid: dfcda70424665594cb6d083bc3d9ba30, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4982655633558715289, guid: dfcda70424665594cb6d083bc3d9ba30, type: 3}
       propertyPath: m_Name
       value: EnterADoor
