@@ -9,30 +9,35 @@ public class RatController : MonoBehaviour
         private Vector2 leftstick;
         public Transform groundCheck, wallCheck;
         public float groundCheckRadius;
-        public LayerMask groundLayer, ClimberLayer, RatGroundLayer;
+        public LayerMask groundLayer, ClimberLayer, RatGroundLayer,_WallLayer;
         public float jumpForce;
         private Rigidbody2D rb;
         public float speed, _climbingSpeed;
         public MainPlayerController _mPC;
         public bool _isGrounded, _isRatGrounded, _isOnWall;
         private bool _hasRatLeft;
-        public GameObject RatClimber, RatGround;
+        public GameObject RatClimber, RatGround, player;
         public float ratGroundTimer;
+        private bool  _playerFound=false;
+        private Animator _anim;
     // Start is called before the first frame update
 
      private void Awake() 
     {   
         
         controls = new Controls(); 
-        GameObject player = GameObject.FindWithTag("Player");
-        _mPC=player.GetComponent<MainPlayerController>();
-        RatClimber = GameObject.FindWithTag("RatClimber");
-        RatGround = GameObject.FindWithTag("RatGround");
+
+        
+        
+        
+       
+       
     }
     void Start()
     {
-
-        
+            
+         
+        _anim=GetComponent<Animator>();
          rb = GetComponent<Rigidbody2D>();
         //Input System Callings ---------------------------------
          controls.Pcontroller.LeftStick.performed += ctx => leftstick = ctx.ReadValue<Vector2>();
@@ -43,14 +48,37 @@ public class RatController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {   
+            if(player==null)
+            {  
+                   player = GameObject.FindWithTag("Player");
+                    if(player!=null)
+                    {
+                        _playerFound=true;
+                        
+                         RatClimber = GameObject.FindWithTag("RatClimber");
+        RatGround = GameObject.FindWithTag("RatGround");
+                    }
+            }
+         
+         if(player!=null&&_playerFound==true)
+         {
+                _mPC=player.GetComponent<MainPlayerController>();
+                _playerFound=false;
+         }
         GroundChecker();
         RatGroundController();
         WallChecker();
     }
     void FixedUpdate() 
     {
-        Running();
+
+        if(player!=null)
+        {
+            Running();
         WallClimber();
+
+        }
+        
      
         
     }
@@ -75,6 +103,7 @@ public class RatController : MonoBehaviour
                  _isGrounded = Physics2D.OverlapCircle(groundCheck.position,groundCheckRadius,groundLayer);
                  
     }
+  
     private void RatGroundController()
     {
             
@@ -132,12 +161,12 @@ public class RatController : MonoBehaviour
 
     private void AnimatorMachineState()
     {
-            if(_isGrounded)
+            if(_isGrounded||_isRatGrounded)
             {
                      if(leftstick.x!=0)
                     {
-                            //_animator.SetBool("Idle",false);
-                            //_animator.SetBool("Run",true);
+                            _anim.SetBool("Idle",false);
+                            _anim.SetBool("Run",true);
 
                             if(leftstick.x<0)
                             {
@@ -147,6 +176,12 @@ public class RatController : MonoBehaviour
                             {
                                 transform.rotation = Quaternion.Euler(0f,180f,0f);
                             }
+                    }
+                    else
+                    {
+
+                        _anim.SetBool("Idle",true);
+                            _anim.SetBool("Run",false);
                     }
                 
             }
