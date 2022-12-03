@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 990a23d059f1f4c4db7e8b10a95f0834, type: 3}
   m_Name: DoorBehavior
   m_EditorClassIdentifier: 
-  sceneToLoad: {fileID: 0}
-  levelEntrance: {fileID: 0}
+  sceneToLoad: {fileID: 11400000, guid: daabcc2b253c756438883028d4d61445, type: 2}
+  levelEntrance: {fileID: 11400000, guid: e1d7891fa53aeba4eb1f3a43edafbade, type: 2}
+  _isDoorOpen: 1
