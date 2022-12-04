@@ -361,11 +361,13 @@ public class MainPlayerController : MonoBehaviour
 
 			BunnyBullet BunnyComponent = BunnyBullet.GetComponent<BunnyBullet>();
 
-			if (transform.rotation.y == 180f) {
+			if (transform.rotation.y != 0f) {
 				// Left
+                Debug.Log("Lanzando a La Izquierda");
 				BunnyComponent.direction = Vector2.left; // new Vector2(-1f, 0f)
-			} else {
+			} else  {
 				// Right
+                Debug.Log("Lanzando a La Derecha");
 				BunnyComponent.direction = Vector2.right; // new Vector2(1f, 0f)
 			}
 
