@@ -2299,7 +2299,7 @@ GameObject:
   - component: {fileID: 8290672241467614807}
   - component: {fileID: 8290672241467614804}
   m_Layer: 10
-  m_Name: RatWalls
+  m_Name: Duct
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

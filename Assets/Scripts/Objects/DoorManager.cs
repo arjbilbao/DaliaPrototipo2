@@ -6,7 +6,7 @@ public class DoorManager : MonoBehaviour
 {
 
     public DoorBehavior _DoorSO;
-
+    public GlobalDoorBehaviorManager GDBM;
      public SpriteRenderer _spriteRenderer;
     public Sprite _closedDoor, _openedDoor;
     public GameObject _whenDoorOpens;
@@ -23,7 +23,7 @@ public class DoorManager : MonoBehaviour
     }
        public void Update()
     {
-
+            
          if(_DoorSO._isDoorOpen==false)
          {
             _spriteRenderer.sprite=_closedDoor;
@@ -34,6 +34,12 @@ public class DoorManager : MonoBehaviour
             _spriteRenderer.sprite=_openedDoor;
             _whenDoorOpens.GetComponent<SpriteRenderer>().enabled=true;
          }   
+    }
+
+    public void SetDoorBehavior()
+    {
+
+        GDBM._DoorSO=_DoorSO;
     }
 
 }

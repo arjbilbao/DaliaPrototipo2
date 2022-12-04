@@ -1259,6 +1259,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5893578121279729654, guid: dfcda70424665594cb6d083bc3d9ba30, type: 3}
+      propertyPath: GDBM
+      value: 
+      objectReference: {fileID: 11400000, guid: 2b07e29fe3d0e6442befa2e70178d952, type: 2}
+    - target: {fileID: 5893578121279729654, guid: dfcda70424665594cb6d083bc3d9ba30, type: 3}
       propertyPath: TextMesh
       value: 
       objectReference: {fileID: 1344430428}

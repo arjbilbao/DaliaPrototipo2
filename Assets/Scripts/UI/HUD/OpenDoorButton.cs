@@ -9,6 +9,7 @@ public class OpenDoorButton : MonoBehaviour
 {
 
     public SceneLoader SceneLoader;
+    public GlobalDoorBehaviorManager GDBM;
     public DoorBehavior _DoorSO;
     public Button _thisButton;
     public Image _thisImage;
@@ -34,6 +35,8 @@ public class OpenDoorButton : MonoBehaviour
 
     private void OnEnable()
     {   
+       _DoorSO=GDBM._DoorSO;
+       
             if(_DoorSO._isDoorOpen==true)
             {
                 _thisButton.enabled=false;
