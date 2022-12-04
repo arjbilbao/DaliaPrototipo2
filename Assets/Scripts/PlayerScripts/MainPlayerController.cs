@@ -304,12 +304,31 @@ public class MainPlayerController : MonoBehaviour
     {
             if(_alter=="The Outcast")
             {
-                    if(_isRat==false)
+            if(_isRat==false)
         {
-            _isRat=true;
+          
+
+                        GameObject RAT= GameObject.FindWithTag("Rat");
+                        if(RAT!=null)
+                        {
+                              _isRat=true;
+                             GameObject vcam = GameObject.FindWithTag("Vcam");
+                       var cam = vcam.GetComponent<CinemachineVirtualCamera>();
+                       cam.m_Lens.OrthographicSize=0.8f;
+                       cam.Follow = RAT.transform; 
+                        }
+                        else
+                        {
+                            _isRat=false;
+                        }
+                        
         } else if(_isRat==true)
         {
             _isRat=false;
+            GameObject vcam = GameObject.FindWithTag("Vcam");
+                       var cam = vcam.GetComponent<CinemachineVirtualCamera>();
+                       cam.m_Lens.OrthographicSize=1.5f;
+                       cam.Follow = this.transform; 
         }
 
             }

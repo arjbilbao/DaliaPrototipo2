@@ -505,7 +505,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 310630455912580358}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.357, y: 1.2, z: 0.64752036}
+  m_LocalPosition: {x: -0.357, y: 1.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 310630454299972923}
@@ -559,7 +559,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -3331845306312613305, guid: 3adb28a86d4b550459b9b5b665e4b5b8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -745,6 +745,9 @@ MonoBehaviour:
   onPauseState:
     m_PersistentCalls:
       m_Calls: []
+  onDoorOpeningState:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &310630455941345888
 GameObject:
   m_ObjectHideFlags: 0
@@ -800,7 +803,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.1155034, y: 0.9857165}
+  m_Size: {x: 0.25250068, y: 0.9857165}
   m_EdgeRadius: 0
 --- !u!1 &310630455946888836
 GameObject:

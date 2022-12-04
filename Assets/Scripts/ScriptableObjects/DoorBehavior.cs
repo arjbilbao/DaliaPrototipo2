@@ -8,4 +8,5 @@ public class DoorBehavior : ScriptableObject
 {
     public SceneSO sceneToLoad;
     public LevelEntranceSO levelEntrance;
+    public bool _isDoorOpen;
 }
