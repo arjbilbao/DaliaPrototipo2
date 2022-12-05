@@ -1,4 +1,4 @@
-using System.Collections;
+ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -22,6 +22,7 @@ public class MainPlayerController : MonoBehaviour
         public LayerMask groundLayer, wallLayer;
         public float jumpForce;
         public SO_AlterAnimator SO_AlterAnimator;
+        public float _BreakTimer=0f;
         [SerializeField]
         private bool _isGrounded, _isOnWall;
          [HideInInspector]
@@ -55,11 +56,14 @@ public class MainPlayerController : MonoBehaviour
     void Start()
     {     
 
-        GAA.Changing = true;
+       
+        alterIndex=GAA.AlterIndex;
+       
         rb = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
         _isPantuflaOn=true;
           _animator.SetBool("IsPantuflaOn",true);
+           
 
           AlterChanger();
 
@@ -80,7 +84,10 @@ public class MainPlayerController : MonoBehaviour
           controls.Pcontroller.East.performed += ctx => SpecialSkillController();
           controls.Pcontroller.East.canceled += ctx => DoctorsVision();
 
+          
           controls.Pcontroller.West.performed += ctx => Attacking();
+          controls.Pcontroller.West.canceled += ctx =>speed=150f;
+          controls.Pcontroller.West.canceled += ctx =>_BreakTimer=0f;
 
 
         
@@ -341,6 +348,11 @@ public class MainPlayerController : MonoBehaviour
 
             _animator.SetTrigger("Attack");
             
+        }
+        if(_alter=="The Prisoner")
+        {
+                speed=300f;
+                _BreakTimer=+Time.deltaTime;
         }
 
     }

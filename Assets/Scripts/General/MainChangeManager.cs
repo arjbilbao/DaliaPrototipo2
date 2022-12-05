@@ -14,13 +14,14 @@ public class MainChangeManager : MonoBehaviour
     {
         if(GAA.Changing==true)
         {
-                    for(int i=0;i<TileState.Length-1;i++){
-
-                        if(TileState[i].CanBeChanged==true){
-                            Count+=1;
-                        }
-                    }
-
+                    
+                  foreach( SO_TileMapState state in TileState)
+                  {
+                            if(state.CanBeChanged==true){
+                                    Count+=1;
+                                }
+                  }
+                    
             if(Count==TileState.Length)
             {
                     GAA.Changing=false;

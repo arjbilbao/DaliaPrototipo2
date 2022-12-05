@@ -35,6 +35,7 @@ public class TileChangingManager : MonoBehaviour
         //player= GameObject.FindWithTag("Player");
         firstTime=true;
         state.CanBeChanged=true;
+        Debug.Log("This is the size of the map"+map.size.x);
      }
 
      void Update()
@@ -71,12 +72,14 @@ public class TileChangingManager : MonoBehaviour
                             TileTimer=0.0f;
                         }
 
-                        if(w>map.size.x){
+                        if(w>=map.size.x){
                                 //this sections tells to the Scriptable Object that the change has been completed.
                             state.CanBeChanged=true;
                             spreading=false;
+                            Debug.Log("Spreading is false");
                             w=0;
                             firstTime=true;
+                            GAA.Changing=true;
                         }
                                 
                    

@@ -47,3 +47,4 @@ MonoBehaviour:
   Count: 0
   TileState:
   - {fileID: 11400000, guid: 236a34dc6b911004b8e732a778891c1c, type: 2}
+  - {fileID: 11400000, guid: 2feb19aec95a3484eaa4d5b9a927e0f0, type: 2}

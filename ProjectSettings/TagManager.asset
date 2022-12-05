@@ -23,6 +23,7 @@ TagManager:
   - ExplosionFX
   - Bullet
   - HealthBar
+  - BreakableChecker
   layers:
   - Default
   - TransparentFX
