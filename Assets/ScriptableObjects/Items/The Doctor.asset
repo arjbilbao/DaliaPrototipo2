@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _alter: The Doctor
   _index: 4
-  _animator: {fileID: 0}
+  _animator: {fileID: 22100000, guid: 244e1f624e7cfd747b1753274a72efee, type: 2}

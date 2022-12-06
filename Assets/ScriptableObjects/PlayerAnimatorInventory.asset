@@ -21,3 +21,19 @@ MonoBehaviour:
     CanBeUsed: 1
     index: 1
     name: The Prisoner
+  - _animator: {fileID: 22100000, guid: 8837ef248e5594f4faa825bb02c0d29a, type: 2}
+    CanBeUsed: 1
+    index: 2
+    name: The Outcast
+  - _animator: {fileID: 22100000, guid: 3252ee0e38803b742bd102b2c47b19af, type: 2}
+    CanBeUsed: 1
+    index: 3
+    name: Lagartha
+  - _animator: {fileID: 22100000, guid: 244e1f624e7cfd747b1753274a72efee, type: 2}
+    CanBeUsed: 1
+    index: 4
+    name: The Doctor
+  - _animator: {fileID: 22100000, guid: 3f02caa189452404490a5c4f384f2937, type: 2}
+    CanBeUsed: 1
+    index: 5
+    name: Dalia

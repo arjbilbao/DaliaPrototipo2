@@ -23,6 +23,7 @@ public class MainPlayerController : MonoBehaviour
         public float jumpForce;
         public SO_AlterAnimator SO_AlterAnimator;
         public float _BreakTimer=0f;
+        public ParticleSystem _pSystem;
         [SerializeField]
         private bool _isGrounded, _isOnWall;
          [HideInInspector]
@@ -44,6 +45,9 @@ public class MainPlayerController : MonoBehaviour
         private GameObject prefab;
         [SerializeField]
           public Transform LaunchPoint;
+
+          public bool _transitionEnabled, _transitionClosing;
+          public float _transitionTime;
 
 
 
@@ -104,7 +108,7 @@ public class MainPlayerController : MonoBehaviour
     {
         GroundChecker();
         AlterSkillsManager();
-
+     
     }
         
         
@@ -116,7 +120,7 @@ public class MainPlayerController : MonoBehaviour
           if(_paused==false)
           {
                 Running();
-        WallClimber();
+                 WallClimber();
 
           }  
     
@@ -162,13 +166,13 @@ public class MainPlayerController : MonoBehaviour
 
        
 
-        if(_isGrounded||(_isGrounded!&&_isOnWall))
+        if(_isGrounded||_isOnWall)
         {
 
              _jumpsAvailable=_maxJumps;
         }
 
-        if(_jumpsAvailable>0&&_isOnWall==false)
+        if(_jumpsAvailable>0)
         {
                 rb.AddForce(Vector2.up*(jumpForce-rb.velocity.y) , ForceMode2D.Impulse);
                 _jumpsAvailable-=1;
@@ -176,12 +180,7 @@ public class MainPlayerController : MonoBehaviour
         }
      
 
-        if(_jumpsAvailable>0&&_isOnWall)
-        {       Vector2 move = new Vector2 (1f,0f);
-                rb.AddForce(move*(jumpForce), ForceMode2D.Impulse);
-                _jumpsAvailable-=1;
-            
-        }
+        
     }
 
     private void TongueHodling()
@@ -202,7 +201,7 @@ public class MainPlayerController : MonoBehaviour
             }
             else 
             {
-                rb.velocity=new Vector2 (rb.velocity.x, -rb.velocity.y);
+                rb.velocity=new Vector2 (rb.velocity.x, rb.velocity.y);
             }
                 
 
@@ -256,10 +255,14 @@ public class MainPlayerController : MonoBehaviour
             _animator.runtimeAnimatorController =SO_AlterAnimator.Container[alterIndex]._animator;
             _alter = SO_AlterAnimator.Container[alterIndex].name;
             GAA.Changing=true;
+           
              
     }
     private void AlterIndexation()
     {
+         _transitionEnabled=true;
+         GetComponent<SpriteRenderer>().color = new Color (1f,1f,1f,0f);
+        _pSystem.Play();
         alterIndex+=1;
         if(alterIndex>(SO_AlterAnimator.Container.Count-1))
         {
@@ -387,6 +390,8 @@ public class MainPlayerController : MonoBehaviour
 			
 		
 	}
+
+
 
     private void Pausing()
     {
