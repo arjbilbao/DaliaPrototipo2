@@ -24,6 +24,7 @@ public class MainPlayerController : MonoBehaviour
         public SO_AlterAnimator SO_AlterAnimator;
         public float _BreakTimer=0f;
         public ParticleSystem _pSystem;
+        public GameObject LizzardHair;
         [SerializeField]
         private bool _isGrounded, _isOnWall;
          [HideInInspector]
@@ -283,6 +284,10 @@ public class MainPlayerController : MonoBehaviour
         if(_alter=="Lagartha")
         {
             WallChecker();
+            LizzardHair.SetActive(true);
+        }
+        else{
+            LizzardHair.SetActive(false);
         }
         
     }
@@ -298,6 +303,11 @@ public class MainPlayerController : MonoBehaviour
         {
                 Vision.enabled=true;
         }
+        if(_alter=="Lagartha")
+        {
+            
+        }
+        
     }
 
     private void DoctorsVision()
