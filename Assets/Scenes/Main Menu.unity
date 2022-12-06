@@ -2242,16 +2242,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1132490089}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f76759ccab2ddd94fa45f284e8c1a654, type: 3}
+  m_Script: {fileID: 11500000, guid: d7b9257424f3df941ac91914f1f905b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _spRenderer1: {fileID: 0}
-  _spRenderer2: {fileID: 0}
-  _spriteRenderer3: {fileID: 0}
-  _mouthClosed: {fileID: 0}
-  _faceClosed: {fileID: 0}
-  _faceOpened: {fileID: 0}
-  _mouthOpened: {fileID: 0}
+  GAM: {fileID: 11400000, guid: 91f7b91ee3063c440a7312b33aba083a, type: 2}
 --- !u!95 &1132490092
 Animator:
   serializedVersion: 3
@@ -2314,7 +2308,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1132490094}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1132490091}
+        m_TargetAssemblyTypeName: GameQuit, Assembly-CSharp
+        m_MethodName: QuitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1132490094
 MonoBehaviour:
   m_ObjectHideFlags: 0
