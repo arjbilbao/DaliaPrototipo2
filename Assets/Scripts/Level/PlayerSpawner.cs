@@ -7,6 +7,7 @@ public class PlayerSpawner : MonoBehaviour
     public PlayerPathSO playerPath;
     public GameObject playerPrefab;
     public CinemachineVirtualCamera followCamera;
+    public CinemachineVirtualCamera Minimap;
     public GameObject playerParent;
 
     public void InstantiatePlayerOnLevel()
@@ -17,6 +18,8 @@ public class PlayerSpawner : MonoBehaviour
         player.transform.position = entrance.transform.position;
         player.transform.parent = playerParent.transform;
         this.followCamera.Follow = player.transform;
+        this.Minimap.Follow = player.transform;
+
 
         // When player is instantiated and moved, reset path
         playerPath.levelEntrance = null;
