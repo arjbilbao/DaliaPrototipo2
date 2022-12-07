@@ -189,7 +189,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneToLoad: {fileID: 0}
   levelEntrance: {fileID: 0}
-  loadingScreen: 0
+  loadingScreen: 1
   playerPath: {fileID: 11400000, guid: fe890c5c455ffa641a791a5187bdc36d, type: 2}
   loadSceneEvent: {fileID: 11400000, guid: 4f10557af7e0f3145b2f9ee86504bacf, type: 2}
 --- !u!114 &5893578121279729654
@@ -205,7 +205,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SceneLoader: {fileID: 4982655632629494696}
+  GDBM: {fileID: 0}
   _DoorSO: {fileID: 11400000, guid: f08292210b6b341448559ab427e44605, type: 2}
+  _thisButton: {fileID: 0}
+  _thisImage: {fileID: 0}
+  TextMesh: {fileID: 0}
+  _GoButton: {fileID: 0}
 --- !u!1 &4982655633558715289
 GameObject:
   m_ObjectHideFlags: 0

@@ -161,7 +161,7 @@ public class AudioManager : MonoBehaviour
             {
                
                
-                StartCoroutine(FadeAudioSource.StartFade(audiosource,fadingTime*4f,maxAudio));
+                StartCoroutine(FadeAudioSource.StartFade(audiosource,fadingTime*2f,maxAudio));
 
                 if(audiosource.volume==maxAudio)
                 {

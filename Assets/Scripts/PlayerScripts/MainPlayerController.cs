@@ -25,8 +25,8 @@ public class MainPlayerController : MonoBehaviour
         public float _BreakTimer=0f;
         public ParticleSystem _pSystem;
         public GameObject LizzardHair;
-        [SerializeField]
-        private bool _isGrounded, _isOnWall;
+        [HideInInspector]
+        public bool _isGrounded, _isOnWall;
          [HideInInspector]
         public Animator _animator;
       
@@ -49,6 +49,10 @@ public class MainPlayerController : MonoBehaviour
 
           public bool _transitionEnabled, _transitionClosing;
           public float _transitionTime;
+
+
+          //groundbreaker
+          public bool _canBreakGround;
 
 
 
@@ -260,17 +264,20 @@ public class MainPlayerController : MonoBehaviour
              
     }
     private void AlterIndexation()
-    {
-         _transitionEnabled=true;
-         GetComponent<SpriteRenderer>().color = new Color (1f,1f,1f,0f);
-        _pSystem.Play();
-        alterIndex+=1;
-        if(alterIndex>(SO_AlterAnimator.Container.Count-1))
-        {
-            alterIndex=0;
-        }
-        GAA.AlterIndex=alterIndex;
-        AlterChanger();
+    {       if(_isPantuflaOn&&_isTonguelaunched==false&&_isTongueHeld==false)
+                {
+                        _transitionEnabled=true;
+                        GetComponent<SpriteRenderer>().color = new Color (1f,1f,1f,0f);
+                        _pSystem.Play();
+                        alterIndex+=1;
+                    if(alterIndex>(SO_AlterAnimator.Container.Count-1))
+                    {
+                    alterIndex=0;
+                    }
+                    GAA.AlterIndex=alterIndex;
+                    AlterChanger();
+                }
+         
     }
 
     private void AlterSkillsManager()
@@ -278,6 +285,8 @@ public class MainPlayerController : MonoBehaviour
         //OnJumping
         if(_alter=="The Prisoner"){
             _maxJumps=2;
+            
+        
         }
         else{ _maxJumps=1;}
 
@@ -347,7 +356,7 @@ public class MainPlayerController : MonoBehaviour
             _isRat=false;
             GameObject vcam = GameObject.FindWithTag("Vcam");
                        var cam = vcam.GetComponent<CinemachineVirtualCamera>();
-                       cam.m_Lens.OrthographicSize=1.5f;
+                       cam.m_Lens.OrthographicSize=2.3f;
                        cam.Follow = this.transform; 
         }
 
@@ -366,6 +375,14 @@ public class MainPlayerController : MonoBehaviour
         {
                 speed=300f;
                 _BreakTimer=+Time.deltaTime;
+
+                if(_jumpsAvailable==0)
+                {
+                    _canBreakGround=true;
+                }
+                else{
+                    _canBreakGround=false;
+                }
         }
 
     }
