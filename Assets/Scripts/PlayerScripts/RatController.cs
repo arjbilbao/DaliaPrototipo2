@@ -100,7 +100,7 @@ public class RatController : MonoBehaviour
     private void GroundChecker()
     {
 
-                 _isGrounded = Physics2D.OverlapCircle(groundCheck.position,groundCheckRadius,groundLayer);
+                 _isGrounded = Physics2D.OverlapCircle(groundCheck.position,groundCheckRadius,groundLayer|RatGroundLayer);
                  
     }
   
