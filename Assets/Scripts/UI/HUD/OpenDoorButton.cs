@@ -36,7 +36,8 @@ public class OpenDoorButton : MonoBehaviour
     private void OnEnable()
     {   
        _DoorSO=GDBM._DoorSO;
-       
+       if(_DoorSO!=null)
+       {
             if(_DoorSO._isDoorOpen==true)
             {
                 _thisButton.enabled=false;
@@ -55,6 +56,9 @@ public class OpenDoorButton : MonoBehaviour
        
         SceneLoader.levelEntrance=_DoorSO.levelEntrance;
         SceneLoader.sceneToLoad=_DoorSO.sceneToLoad;
+
+       }
+            
     }
     private void OnDisable()
     {

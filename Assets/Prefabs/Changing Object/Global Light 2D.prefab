@@ -88,5 +88,9 @@ MonoBehaviour:
   IsASingleLight: 0
   _light: {fileID: 4148621826803197120}
   Lizard: {r: 0, g: 0.9622642, b: 0.09753678, a: 0}
+  prisoner: {r: 0.3018868, g: 0.19211094, b: 0.018511934, a: 0}
+  outcast: {r: 0.54901963, g: 0.5647059, b: 0.34509805, a: 1}
+  doctor: {r: 0.3977394, g: 0.5981903, b: 0.7735849, a: 0}
+  dalia: {r: 0.99607843, g: 0.80784315, b: 1, a: 1}
   general: {r: 1, g: 1, b: 1, a: 0}
   GAM: {fileID: 11400000, guid: 91f7b91ee3063c440a7312b33aba083a, type: 2}
