@@ -8,7 +8,7 @@ public class AudioManager : MonoBehaviour
     public SO_SoundtrackManager [] _soundtrackManagers;
     public AudioSource [] _audioSource;
     public SO_GlobalAlterManager GAM;
-    private bool playing=false;
+    private bool playing=false, playing1=false;
     private bool fading=false;
     public bool _SountrackOn, _MainMenuIsOn=true;
      private Controls controls;
@@ -65,10 +65,10 @@ public class AudioManager : MonoBehaviour
     {
 
           _audioSource[1].clip=_soundtrackManagers[1].Soundtracks[0];
-            if(playing==false){
+            if(playing1==false){
 
                  _audioSource[1].Play();
-                 playing=true;
+                 playing1=true;
             }
     }
      public void PauseAny(int index)
@@ -76,7 +76,7 @@ public class AudioManager : MonoBehaviour
 
            
             _audioSource[index].Pause();
-            playing=false;
+            playing1=false;
     }
     
 

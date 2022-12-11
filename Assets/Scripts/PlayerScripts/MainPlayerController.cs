@@ -31,7 +31,7 @@ public class MainPlayerController : MonoBehaviour
         public Animator _animator;
       
         
-        [HideInInspector]
+        
         public float _jumpsAvailable, _maxJumps=1;
          [HideInInspector]
         public int alterIndex;
@@ -53,6 +53,7 @@ public class MainPlayerController : MonoBehaviour
 
           //groundbreaker
           public bool _canBreakGround;
+          public bool _dialogue;
 
 
 
@@ -97,6 +98,7 @@ public class MainPlayerController : MonoBehaviour
           controls.Pcontroller.West.performed += ctx => Attacking();
           controls.Pcontroller.West.canceled += ctx =>speed=150f;
           controls.Pcontroller.West.canceled += ctx =>_BreakTimer=0f;
+          controls.Pcontroller.West.canceled += ctx =>_canBreakGround=false;
 
 
         
@@ -109,7 +111,7 @@ public class MainPlayerController : MonoBehaviour
     void Update()
     {   GAA.CurrentAlter =_alter;
 
-    if(_paused==false)
+    if(_paused==false&&_dialogue==false)
     {
         GroundChecker();
         AlterSkillsManager();
@@ -122,12 +124,17 @@ public class MainPlayerController : MonoBehaviour
     void FixedUpdate()
     {
             
-          if(_paused==false)
+          if(_paused==false&&_dialogue==false)
           {
                 Running();
                  WallClimber();
 
           }  
+
+          if(_paused||_dialogue)
+          {
+            rb.velocity=new Vector2(0f,rb.velocity.y);
+          }
     
         
             
@@ -135,7 +142,7 @@ public class MainPlayerController : MonoBehaviour
     }
 
      void LateUpdate()
-    {   if(_paused==false)
+    {   if(_paused==false&&_dialogue==false)
     {
             AnimatorMachineState();
     }
@@ -169,7 +176,7 @@ public class MainPlayerController : MonoBehaviour
     private void Jumping()
     {
 
-       
+       _jumpsAvailable-=1;
 
         if(_isGrounded||_isOnWall)
         {
@@ -178,9 +185,9 @@ public class MainPlayerController : MonoBehaviour
         }
 
         if(_jumpsAvailable>0)
-        {
+        {       
                 rb.AddForce(Vector2.up*(jumpForce-rb.velocity.y) , ForceMode2D.Impulse);
-                _jumpsAvailable-=1;
+                
             
         }
      
@@ -220,6 +227,11 @@ public class MainPlayerController : MonoBehaviour
     {
 
                  _isGrounded = Physics2D.OverlapCircle(groundCheck.position,groundCheckRadius,groundLayer);
+
+                 if(_isGrounded)
+                 {
+                    _jumpsAvailable=_maxJumps;
+                 }
     }
     private void AnimatorMachineState()
     {
@@ -250,6 +262,13 @@ public class MainPlayerController : MonoBehaviour
             {
                             _animator.SetBool("Idle",true);
                             _animator.SetBool("Run",false);
+            }
+
+            if(_paused||_dialogue)
+            {
+                            _animator.SetBool("Idle",true);
+                            _animator.SetBool("Run",false);
+
             }
        
     }
@@ -285,6 +304,7 @@ public class MainPlayerController : MonoBehaviour
         //OnJumping
         if(_alter=="The Prisoner"){
             _maxJumps=2;
+            
             
         
         }
@@ -365,7 +385,11 @@ public class MainPlayerController : MonoBehaviour
     }
     private void Attacking()
     {
-        if(_alter=="Dalia"&&_isPantuflaOn)
+
+            if(GSC.gameManager.currentState.stateName!="DoorOpening")
+            {
+
+                 if(_alter=="Dalia"&&_isPantuflaOn)
         {
 
             _animator.SetTrigger("Attack");
@@ -376,7 +400,7 @@ public class MainPlayerController : MonoBehaviour
                 speed=300f;
                 _BreakTimer=+Time.deltaTime;
 
-                if(_jumpsAvailable==0)
+                if(_jumpsAvailable==1)
                 {
                     _canBreakGround=true;
                 }
@@ -384,6 +408,8 @@ public class MainPlayerController : MonoBehaviour
                     _canBreakGround=false;
                 }
         }
+            }
+       
 
     }
     private void Launching()
@@ -433,6 +459,11 @@ public class MainPlayerController : MonoBehaviour
             GSC.RestorePreviousState();
             _paused=false;
         }
+    }
+     public void OnDialogue(bool _state)
+    {
+
+       _dialogue=_state;
     }
     public void BackFromPause()
     {

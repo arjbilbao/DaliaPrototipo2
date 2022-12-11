@@ -22,7 +22,7 @@ public class ExplodeOnClick : MonoBehaviour {
 			
 				string _alter = other.gameObject.GetComponentInParent<MainPlayerController>()._alter;
 			
-				if(_alter=="The Prisoner"&&_thisIsTime>=0.05f&&other.gameObject.GetComponentInParent<MainPlayerController>()._isGrounded)
+				if(_alter=="The Prisoner"&&_thisIsTime>=0.05f&&other.gameObject.GetComponentInParent<MainPlayerController>()._isGrounded&&this.gameObject.tag!="Platform")
 				{
 					Debug.Log ("El Alter es "+ _alter);
 
@@ -32,7 +32,7 @@ public class ExplodeOnClick : MonoBehaviour {
 				}
 
 				if(_alter=="The Prisoner"&&other.gameObject.GetComponentInParent<MainPlayerController>()._canBreakGround==true)
-				{
+				{	GetComponent<Rigidbody2D>().bodyType=RigidbodyType2D.Dynamic;
 						_explodable.explode();
 					ExplosionForce ef = GameObject.FindObjectOfType<ExplosionForce>();
 

@@ -364,6 +364,7 @@ GameObject:
   - component: {fileID: 229600868}
   - component: {fileID: 229600869}
   - component: {fileID: 229600870}
+  - component: {fileID: 229600871}
   m_Layer: 5
   m_Name: Start
   m_TagString: Untagged
@@ -442,6 +443,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 229600871}
+        m_TargetAssemblyTypeName: LevelAdvanceChanger, Assembly-CSharp
+        m_MethodName: SetLevel
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 043d62207ef4bf44f866ee6061412a83, type: 2}
+          m_ObjectArgumentAssemblyTypeName: LevelAdvanceSO, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -540,6 +553,19 @@ MonoBehaviour:
   loadingScreen: 1
   playerPath: {fileID: 11400000, guid: fe890c5c455ffa641a791a5187bdc36d, type: 2}
   loadSceneEvent: {fileID: 11400000, guid: 4f10557af7e0f3145b2f9ee86504bacf, type: 2}
+--- !u!114 &229600871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 229600863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5edb40b65c91396449be174c662acaa2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelManager: {fileID: 11400000, guid: 78df7003666c2d641a2745784341ef0d, type: 2}
 --- !u!1 &256637561
 GameObject:
   m_ObjectHideFlags: 0

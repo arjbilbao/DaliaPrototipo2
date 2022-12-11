@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb8f8057f7ee0de499d3cf1ac18f9ebd, type: 3}
+  m_Name: AtDrFreemansOffice
+  m_EditorClassIdentifier: 
+  leftCharacter: {fileID: 11400000, guid: 42ad4892f5665cc42bea5ddf64c201d4, type: 2}
+  rightCharacter: {fileID: 11400000, guid: f586c313017e25f40abb57545125f644, type: 2}
+  sentences:
+  - character: {fileID: 11400000, guid: f586c313017e25f40abb57545125f644, type: 2}
+    text: Well, I see you have improved considerably.
+  - character: {fileID: 11400000, guid: 42ad4892f5665cc42bea5ddf64c201d4, type: 2}
+    text: Thanks, I've seen myself as well.
+  - character: {fileID: 11400000, guid: f586c313017e25f40abb57545125f644, type: 2}
+    text: It makes me think you are ready to go.
+  - character: {fileID: 11400000, guid: 42ad4892f5665cc42bea5ddf64c201d4, type: 2}
+    text: I'll be pleased to do so.

@@ -24,6 +24,8 @@ TagManager:
   - Bullet
   - HealthBar
   - BreakableChecker
+  - Platform
+  - DialogueT
   layers:
   - Default
   - TransparentFX

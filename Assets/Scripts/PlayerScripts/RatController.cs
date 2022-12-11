@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Cinemachine;
+using UnityEngine.Experimental.Rendering.Universal;
 
 public class RatController : MonoBehaviour
 {       private Controls controls;
@@ -20,6 +21,7 @@ public class RatController : MonoBehaviour
         public float ratGroundTimer;
         private bool  _playerFound=false;
         private Animator _anim;
+        public Light2D _light;
     // Start is called before the first frame update
 
      private void Awake() 
@@ -76,6 +78,14 @@ public class RatController : MonoBehaviour
         {
             Running();
         WallClimber();
+                if(_mPC._isRat)
+                {
+                    _light.intensity=0.66f;
+                }
+                else{
+
+                    _light.intensity=0.3f;
+                }
 
         }
         
@@ -127,7 +137,7 @@ public class RatController : MonoBehaviour
             
         
         if(_mPC._isRat)
-            {
+            { 
                 rb.velocity=new Vector2 (leftstick.x*speed*Time.deltaTime, rb.velocity.y) ;
             }
             else{

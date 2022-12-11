@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4175959908840111404}
   - component: {fileID: 4175959908840111406}
   - component: {fileID: 4175959908840111393}
+  - component: {fileID: 138305432233295876}
   m_Layer: 0
   m_Name: FrontDoor
   m_TagString: Door
@@ -226,6 +227,127 @@ MonoBehaviour:
   _closedDoor: {fileID: 21300000, guid: c410694558a8cc3448fca27b228add0a, type: 3}
   _openedDoor: {fileID: 21300000, guid: 2849db5f0293fed429e3da8e0ff692bb, type: 3}
   _whenDoorOpens: {fileID: 7779771617011789859}
+--- !u!114 &138305432233295876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4175959908840111403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bdc4e96e3037a54ebbc3ddbbd927b79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelChangedEvent: {fileID: 11400000, guid: 1eebb48746bcd514ebce224b06324483, type: 2}
+  components: []
+  enabledLevels: []
+  disabledLevels: []
+  onEliadLevel:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4175959908840111404}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onThePrisonerLevel:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4175959908840111404}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onTheOutCastLevel:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4175959908840111404}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onLizardQueenLevel:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4175959908840111404}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onTheDoctorLevel:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4175959908840111404}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  onDaliaLevel:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4175959908840111404}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  onAllLevel:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4175959908840111404}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1 &7779771617011789859
 GameObject:
   m_ObjectHideFlags: 0

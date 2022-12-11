@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6affd9af3c4714347a854fd0f6a3ce5a, type: 3}
+  m_Script: {fileID: 11500000, guid: 5ebfa87b229ad2346870d6e7d975d6dd, type: 3}
   m_Name: GameManager
   m_EditorClassIdentifier: 
-  currentState: {fileID: 0}
-  gameStateChanged: {fileID: 11400000, guid: fa74a12beee2bf5458e185c47cad31fb, type: 2}
+  currentLevel: {fileID: 0}
+  levelChanged: {fileID: 11400000, guid: 1eebb48746bcd514ebce224b06324483, type: 2}

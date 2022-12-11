@@ -19,6 +19,7 @@ public class GameStateListener : MonoBehaviour
     public UnityEvent onPlayingState;
     public UnityEvent onPauseState;
     public UnityEvent onDoorOpeningState;
+    public UnityEvent onDialogueState;
 
     private void OnEnable()
     {
@@ -67,5 +68,8 @@ public class GameStateListener : MonoBehaviour
             this.onPauseState.Invoke();
         if (newGameState.stateName == "DoorOpening" && this.onDoorOpeningState != null)
             this.onDoorOpeningState.Invoke();
+
+        if (newGameState.stateName == "Dialogue" && this.onDialogueState != null)
+            this.onDialogueState.Invoke();
     }
 }
