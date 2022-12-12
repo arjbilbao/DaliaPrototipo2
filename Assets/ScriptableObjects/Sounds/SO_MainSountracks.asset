@@ -17,6 +17,4 @@ MonoBehaviour:
   decreasing: 0
   control: 0
   Soundtracks:
-  - {fileID: 8300000, guid: 4452f1969f3150449aaf2a2f08695812, type: 3}
-  - {fileID: 8300000, guid: 77d5f0a76c649fa4caacde6e049295d1, type: 3}
-  - {fileID: 8300000, guid: 6250cb869cf73194e87e46a68632229d, type: 3}
+  - {fileID: 8300000, guid: f27da75ba6002e64d956a252ad40152f, type: 3}

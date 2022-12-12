@@ -16,4 +16,10 @@ public class LevelAdvanceChanger : MonoBehaviour
     {
         this.levelManager.RestorePreviousLevel();
     }
+
+    public void EstablishPreviousLevel()
+    {
+
+        this.levelManager.EstablishPreviousLevel();
+    }
 }

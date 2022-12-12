@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f316d671b678aed4c8e5dc9adb77940f, type: 3}
   m_Name: LevelAdvanceSOGameEvent
   m_EditorClassIdentifier: 
-  _debugValue: {fileID: 11400000, guid: 7bd51d793af2b9b49baf7e58ff19772b, type: 2}
+  _debugValue: {fileID: 11400000, guid: de2f76af936015e41847ff19f8a02771, type: 2}

@@ -13,5 +13,4 @@ MonoBehaviour:
   m_Name: BackGroundTilesSlot
   m_EditorClassIdentifier: 
   tiles:
-  - {fileID: 11400000, guid: 4de0fd4fde2d1604da9e27d65ddd5ba2, type: 2}
-  - {fileID: 11400000, guid: ea08207b3f04b10449343fdb8e2bd26e, type: 2}
+  - {fileID: 11400000, guid: 243bcd71bf2376e44ada325a7704412b, type: 2}

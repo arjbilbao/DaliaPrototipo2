@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6087788930466419321}
   - component: {fileID: 5688306936233668562}
   - component: {fileID: 3212189695679548165}
+  - component: {fileID: 8277859115280917228}
   m_Layer: 0
   m_Name: LevelInitializer
   m_TagString: Untagged
@@ -76,6 +77,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8277859115280917228}
+        m_TargetAssemblyTypeName: LevelAdvanceChanger, Assembly-CSharp
+        m_MethodName: EstablishPreviousLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8277859115280917228}
+        m_TargetAssemblyTypeName: LevelAdvanceChanger, Assembly-CSharp
+        m_MethodName: RestorePreviousLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &5688306936233668562
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -91,6 +116,7 @@ MonoBehaviour:
   playerPath: {fileID: 11400000, guid: fe890c5c455ffa641a791a5187bdc36d, type: 2}
   playerPrefab: {fileID: 310630455912580358, guid: ec06d28ea901ecd4b9ac00f626792091, type: 3}
   followCamera: {fileID: 0}
+  Minimap: {fileID: 0}
   playerParent: {fileID: 0}
 --- !u!114 &3212189695679548165
 MonoBehaviour:
@@ -105,6 +131,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 11400000, guid: 463cdd48be31cb64390f5a9163c1a6c9, type: 2}
+--- !u!114 &8277859115280917228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3464583740477423287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5edb40b65c91396449be174c662acaa2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelManager: {fileID: 11400000, guid: 78df7003666c2d641a2745784341ef0d, type: 2}
 --- !u!1 &8506761441784414359
 GameObject:
   m_ObjectHideFlags: 0

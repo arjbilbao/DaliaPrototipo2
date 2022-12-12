@@ -528,6 +528,172 @@ MonoBehaviour:
   GAM: {fileID: 11400000, guid: 91f7b91ee3063c440a7312b33aba083a, type: 2}
   Dalia: {fileID: 1861010876}
   dalias: {fileID: 11400000, guid: c434088728a90a84cbd8c8f50408fc2f, type: 2}
+--- !u!1 &383710872
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 383710875}
+  - component: {fileID: 383710874}
+  - component: {fileID: 383710873}
+  m_Layer: 0
+  m_Name: LevelManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &383710873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 383710872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5edb40b65c91396449be174c662acaa2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelManager: {fileID: 11400000, guid: 78df7003666c2d641a2745784341ef0d, type: 2}
+--- !u!114 &383710874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 383710872}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bdc4e96e3037a54ebbc3ddbbd927b79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelChangedEvent: {fileID: 11400000, guid: 1eebb48746bcd514ebce224b06324483, type: 2}
+  components: []
+  enabledLevels: []
+  disabledLevels: []
+  onEliadLevel:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 383710873}
+        m_TargetAssemblyTypeName: LevelAdvanceChanger, Assembly-CSharp
+        m_MethodName: EstablishPreviousLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onThePrisonerLevel:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 383710873}
+        m_TargetAssemblyTypeName: LevelAdvanceChanger, Assembly-CSharp
+        m_MethodName: SetLevel
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: de2f76af936015e41847ff19f8a02771, type: 2}
+          m_ObjectArgumentAssemblyTypeName: LevelAdvanceSO, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onTheOutCastLevel:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 383710873}
+        m_TargetAssemblyTypeName: LevelAdvanceChanger, Assembly-CSharp
+        m_MethodName: SetLevel
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 6b241dad19dfbe84a992112d916668df, type: 2}
+          m_ObjectArgumentAssemblyTypeName: LevelAdvanceSO, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onLizardQueenLevel:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 383710873}
+        m_TargetAssemblyTypeName: LevelAdvanceChanger, Assembly-CSharp
+        m_MethodName: SetLevel
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 7bd51d793af2b9b49baf7e58ff19772b, type: 2}
+          m_ObjectArgumentAssemblyTypeName: LevelAdvanceSO, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onTheDoctorLevel:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 383710873}
+        m_TargetAssemblyTypeName: LevelAdvanceChanger, Assembly-CSharp
+        m_MethodName: SetLevel
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: f75a3ee841bb69c43bb713c5f0335b5c, type: 2}
+          m_ObjectArgumentAssemblyTypeName: LevelAdvanceSO, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onDaliaLevel:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 383710873}
+        m_TargetAssemblyTypeName: LevelAdvanceChanger, Assembly-CSharp
+        m_MethodName: SetLevel
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 8a02aa2f3c0faac4b9f19409b1688a28, type: 2}
+          m_ObjectArgumentAssemblyTypeName: LevelAdvanceSO, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onAllLevel:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 383710873}
+        m_TargetAssemblyTypeName: LevelAdvanceChanger, Assembly-CSharp
+        m_MethodName: SetLevel
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: de55e5fe0c7ab804c9d28795dbd682d9, type: 2}
+          m_ObjectArgumentAssemblyTypeName: LevelAdvanceSO, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!4 &383710875
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 383710872}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.5460463, y: 0.19103585, z: -12.042436}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &588654186
 GameObject:
   m_ObjectHideFlags: 0

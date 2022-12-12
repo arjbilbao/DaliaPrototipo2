@@ -27,4 +27,10 @@ public class LevelAdvanceManagerSO : ScriptableObject
     {
         this.SetLevel(this._previousLevel);
     }
+
+    public void EstablishPreviousLevel()
+
+    {
+        this._previousLevel=this.currentLevel;
+    }
 }
