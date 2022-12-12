@@ -26,7 +26,11 @@ public class TileChangingManager : MonoBehaviour
     private TileMapManager tileMapManager;
 
     [SerializeField]
-    private SO_TileData [] tiles;
+    public  List<SO_TileData> tiles = new List<SO_TileData>();
+    public SO_TilesSlot tilesSlot;
+
+
+    private float stoptimer;
 
     
 
@@ -39,7 +43,27 @@ public class TileChangingManager : MonoBehaviour
      }
 
      void Update()
+
      {        AlterIndex=GAA.AlterIndex;
+
+
+     if(stoptimer<=8f&&spreading)
+     {
+        stoptimer+=Time.deltaTime;
+     }
+     else 
+     {
+        state.CanBeChanged=true;
+        spreading=false;
+        Debug.Log("Spreading is false");
+        w=0;
+        firstTime=true;
+        GAA.Changing=true;
+        stoptimer=0f;
+
+     }
+
+            tiles=tilesSlot.tiles;
                
                
                

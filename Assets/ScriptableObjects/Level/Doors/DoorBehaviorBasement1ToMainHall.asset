@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneToLoad: {fileID: 11400000, guid: a37c99b1fb64f8f4bac6231d6021b2a3, type: 2}
   levelEntrance: {fileID: 11400000, guid: a862cb65c0e04184596535931f5ce3ee, type: 2}
-  _isDoorOpen: 1
+  _isDoorOpen: 0

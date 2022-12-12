@@ -8,7 +8,7 @@ public class CrossFadeController : MonoBehaviour
 
         public SO_GlobalAlterManager GAM;
         public Image Dalia;
-        public Sprite [] dalias;
+        public SO_AlterAnimator dalias;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +18,6 @@ public class CrossFadeController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Dalia.sprite=dalias[GAM.AlterIndex];
+        Dalia.sprite=dalias.Container[GAM.AlterIndex].Pic;
     }
 }

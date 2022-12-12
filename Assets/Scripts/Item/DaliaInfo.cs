@@ -5,7 +5,14 @@ using UnityEngine;
 public class DaliaInfo : MonoBehaviour
 {   
     public SO_Dalia _dalia;
+    public SO_SoundtrackManager SM;
+    public AudioClip _clip;
+    public Sprite Pic, BG;
     public SO_AlterAnimator _AlterAnimator;
+    public LevelAdvanceSO level;
+    public LevelAdvanceChanger levelChanger;
+    public SO_TileData tile;
+    public SO_TilesSlot tileSlot;
 
     // Start is called before the first frame update
    
@@ -30,12 +37,24 @@ public class DaliaInfo : MonoBehaviour
                         {       _AlterAnimator.Container[i].name=_dalia._alter;
                                _AlterAnimator.Container[i].index=i;
                                _AlterAnimator.Container[i].CanBeUsed=true;
+                               _AlterAnimator.Container[i].Pic=Pic;
+                               _AlterAnimator.Container[i].BackGround=BG;
+                               _AlterAnimator.Container[i].Tile=tile;
 
                                Destroy(this.gameObject);
                         }
             }
 
+            SM.Soundtracks.Add(_clip);
+            tileSlot.tiles.Add(tile);
+            other.gameObject.GetComponent<MainPlayerController>().AlterIndexation();
+
 
         }
+    }
+
+    private void OnDestroy() 
+    {
+       levelChanger.SetLevel(level);
     }
 }

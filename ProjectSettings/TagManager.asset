@@ -26,6 +26,7 @@ TagManager:
   - BreakableChecker
   - Platform
   - DialogueT
+  - CinematicT
   layers:
   - Default
   - TransparentFX
@@ -45,7 +46,7 @@ TagManager:
   - BreakableObject
   - Minimapa
   - Enemies
-  - 
+  - Platforms
   - 
   - 
   - 

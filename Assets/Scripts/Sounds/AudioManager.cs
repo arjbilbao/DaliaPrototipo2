@@ -185,7 +185,11 @@ public class AudioManager : MonoBehaviour
             
 
     
+    public void RaiseFading()
+    {
 
+        fading=true;
+    }
 
      public void OnEnable() 
     {

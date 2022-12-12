@@ -13,20 +13,40 @@ public class EnemyPatrol : MonoBehaviour
 	private GameObject _target;
 	public BoxCollider2D PatrollArea;
 	public GameObject PatrollCenter;
+	public bool cinematic,_targetReached;
+	public GameObject _cinematicTarget;
 
 
     // Start is called before the first frame update
     void Start()
     {	 _animator = GetComponent<Animator>();
-			Centering();
+		
+		if(!cinematic){
+		Centering();
 		UpdateTarget();
-		StartCoroutine("PatrolToTarget");
+			StartCoroutine("PatrolToTarget");
+		}
+		
 	}
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(cinematic)
+		{
+			//StopCoroutine("PatrolToTarget");
+				UpdateCinematicTarget();
+			StartCoroutine("CinematicChase");
+		}
+		else if(!cinematic&&_targetReached){
+				StopCoroutine("CinematicChase");
+			_animator.SetBool("Run",false);
+			_animator.SetBool("Idle",true);
+			transform.position=new Vector3(_cinematicTarget.transform.position.x,transform.position.y,transform.position.z);
+			_targetReached=false;
+
+		
+		}
     }
 
 
@@ -70,7 +90,7 @@ public class EnemyPatrol : MonoBehaviour
 		}
 
 		// At this point, i've reached the target, let's set our position to the target's one
-		Debug.Log("Target reached");
+		
 			_animator.SetBool("Run",false);
 			_animator.SetBool("Idle",true);
 		transform.position = new Vector2(_target.transform.position.x, transform.position.y);
@@ -97,4 +117,69 @@ public class EnemyPatrol : MonoBehaviour
       
       
     }
+
+		public void UpdateCinematicTarget()
+		{
+			if (_cinematicTarget.transform.position.x <= transform.position.x) {
+			
+			transform.localScale = new Vector3(-1, 1, 1);
+		}
+
+		// If we are in the right, change target to the left
+		else if (_cinematicTarget.transform.position.x >= transform.position.x) {
+			
+			transform.localScale = new Vector3(1, 1, 1);
+		}
+					cinematic=false;
+		}
+     
+	 
+	 
+	 public IEnumerator CinematicChase()
+	 {
+			
+			while(Vector2.Distance(transform.position, new Vector3(_cinematicTarget.transform.position.x,transform.position.y, transform.position.z)) > 0.05f)
+			{
+			Vector2 direction = new Vector3(_cinematicTarget.transform.position.x,transform.position.y, transform.position.z) - transform.position;
+			float xDirection = direction.x;
+			transform.Translate(direction.normalized * speed * Time.deltaTime);
+			_animator.SetBool("Run",true);
+			_animator.SetBool("Idle",false);
+
+			
+			 yield return null;
+
+			}
+
+			_animator.SetBool("Run",false);
+			_animator.SetBool("Idle",true);
+			transform.position=new Vector3(_cinematicTarget.transform.position.x,transform.position.y,transform.position.z);
+		
+			yield return _targetReached=true;;
+
+			
+			
+		
+			
+			
+			// If we are in the left, change target to the right
+		
+
+	 }
+
+		public void SetCinematicStatus(bool _status)
+		{
+
+			cinematic=_status;
+
+		}
+		public void SetCinematicTarget(GameObject _ctarget)
+		{
+			_cinematicTarget=_ctarget;
+		}
+
+	 public void DestroyThisGuard()
+	 {
+		Destroy(this);
+	 }
 }

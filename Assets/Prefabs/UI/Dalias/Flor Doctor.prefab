@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3361680546030186649}
   - component: {fileID: 7638935375453932537}
   - component: {fileID: 6493327416443380099}
+  - component: {fileID: 8761590249206812743}
   m_Layer: 0
   m_Name: Flor Doctor
   m_TagString: Untagged
@@ -115,6 +116,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _dalia: {fileID: 11400000, guid: ea6b4a751fa79b349a92e28c8bd96b83, type: 2}
   _AlterAnimator: {fileID: 11400000, guid: c434088728a90a84cbd8c8f50408fc2f, type: 2}
+  level: {fileID: 11400000, guid: f75a3ee841bb69c43bb713c5f0335b5c, type: 2}
+  levelChanger: {fileID: 8761590249206812743}
 --- !u!58 &6493327416443380099
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -131,3 +134,16 @@ CircleCollider2D:
   m_Offset: {x: -0.05447578, y: -0.016435254}
   serializedVersion: 2
   m_Radius: 0.6907574
+--- !u!114 &8761590249206812743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1628329872221598558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5edb40b65c91396449be174c662acaa2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelManager: {fileID: 11400000, guid: 78df7003666c2d641a2745784341ef0d, type: 2}

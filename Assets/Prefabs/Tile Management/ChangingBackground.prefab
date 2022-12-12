@@ -2272,11 +2272,7 @@ MonoBehaviour:
   tileMapManager: {fileID: 8754387487142500096}
   tiles:
   - {fileID: 11400000, guid: 243bcd71bf2376e44ada325a7704412b, type: 2}
-  - {fileID: 11400000, guid: 4de0fd4fde2d1604da9e27d65ddd5ba2, type: 2}
-  - {fileID: 11400000, guid: ea08207b3f04b10449343fdb8e2bd26e, type: 2}
-  - {fileID: 11400000, guid: c6822f9007036d3428afecf2ac7719a9, type: 2}
-  - {fileID: 11400000, guid: 8f1e3989d0c849f41af964094056d5a6, type: 2}
-  - {fileID: 11400000, guid: e00a294677bcbe1418179f130758df30, type: 2}
+  tilesSlot: {fileID: 11400000, guid: 78f40c76aed352f46ab15096a123add8, type: 2}
 --- !u!114 &8754387487142500096
 MonoBehaviour:
   m_ObjectHideFlags: 0

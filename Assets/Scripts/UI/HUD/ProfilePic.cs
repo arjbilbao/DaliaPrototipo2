@@ -6,9 +6,7 @@ using UnityEngine.UI;
 public class ProfilePic : MonoBehaviour
 {
 
-
-    public Sprite [] ProfilePics;
-     public Sprite [] ProfileBackgrounds;
+    public SO_AlterAnimator Alter;
     public Image Profile, Background;
     public SO_GlobalAlterManager GAA;
     // Start is called before the first frame update
@@ -20,7 +18,7 @@ public class ProfilePic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Profile.sprite = ProfilePics[GAA.AlterIndex];
-        Background.sprite = ProfileBackgrounds[GAA.AlterIndex];
+        Profile.sprite = Alter.Container[GAA.AlterIndex].Pic;
+        Background.sprite = Alter.Container[GAA.AlterIndex].BackGround;
     }
 }

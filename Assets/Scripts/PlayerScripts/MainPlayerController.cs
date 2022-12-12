@@ -54,6 +54,7 @@ public class MainPlayerController : MonoBehaviour
           //groundbreaker
           public bool _canBreakGround;
           public bool _dialogue;
+          public bool _isOnCinematic;
 
 
 
@@ -274,7 +275,7 @@ public class MainPlayerController : MonoBehaviour
     }
 
   
-    private void AlterChanger()
+    public void AlterChanger()
     {
             _animator.runtimeAnimatorController =SO_AlterAnimator.Container[alterIndex]._animator;
             _alter = SO_AlterAnimator.Container[alterIndex].name;
@@ -282,7 +283,7 @@ public class MainPlayerController : MonoBehaviour
            
              
     }
-    private void AlterIndexation()
+    public void AlterIndexation()
     {       if(_isPantuflaOn&&_isTonguelaunched==false&&_isTongueHeld==false)
                 {
                         _transitionEnabled=true;
@@ -351,8 +352,8 @@ public class MainPlayerController : MonoBehaviour
 
     public void RatSwitching()
     {
-            if(_alter=="The Outcast")
-            {
+            if(_alter=="The Outcast"||_isOnCinematic)
+        {
             if(_isRat==false)
         {
           

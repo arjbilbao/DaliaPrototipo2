@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb8f8057f7ee0de499d3cf1ac18f9ebd, type: 3}
+  m_Name: SwitchTheRat
+  m_EditorClassIdentifier: 
+  leftCharacter: {fileID: 11400000, guid: e3c6b1083eb3c1341af15169f5480adb, type: 2}
+  rightCharacter: {fileID: 11400000, guid: 8af3c459f58564d46b565f828d82268e, type: 2}
+  sentences:
+  - character: {fileID: 11400000, guid: e3c6b1083eb3c1341af15169f5480adb, type: 2}
+    text: Rats can use the pipelines to access places we cannot!
+  - character: {fileID: 11400000, guid: 8af3c459f58564d46b565f828d82268e, type: 2}
+    text: I know that! Why are you telling me things I already know?
+  - character: {fileID: 11400000, guid: e3c6b1083eb3c1341af15169f5480adb, type: 2}
+    text: Just as a reminder! Any time you see a duct entrance, a rat can jump over
+      there
+  - character: {fileID: 11400000, guid: 8af3c459f58564d46b565f828d82268e, type: 2}
+    text: I know that as well! Don't you remember my mind and they're mind are like
+      one (Press East Button to Switch between The Outcast and the Rat)
+  - character: {fileID: 11400000, guid: e3c6b1083eb3c1341af15169f5480adb, type: 2}
+    text: 'And remember: They can use us to climb to higher places (Press Leftstick
+      Up to climb the Outcast)'

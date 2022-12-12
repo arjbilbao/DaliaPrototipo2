@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6086671700847308434}
   - component: {fileID: 3438561066255685045}
   - component: {fileID: 6437898909522702069}
+  - component: {fileID: 1737580921945348703}
   m_Layer: 0
   m_Name: Flor Outcast
   m_TagString: Untagged
@@ -115,6 +116,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _dalia: {fileID: 11400000, guid: eb30085a748620645b85e4c52a8f12d7, type: 2}
   _AlterAnimator: {fileID: 11400000, guid: c434088728a90a84cbd8c8f50408fc2f, type: 2}
+  level: {fileID: 11400000, guid: 6b241dad19dfbe84a992112d916668df, type: 2}
+  levelChanger: {fileID: 1737580921945348703}
 --- !u!58 &6437898909522702069
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -131,3 +134,16 @@ CircleCollider2D:
   m_Offset: {x: -0.05447578, y: -0.016435254}
   serializedVersion: 2
   m_Radius: 0.6907574
+--- !u!114 &1737580921945348703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2020460385216575084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5edb40b65c91396449be174c662acaa2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelManager: {fileID: 11400000, guid: 78df7003666c2d641a2745784341ef0d, type: 2}

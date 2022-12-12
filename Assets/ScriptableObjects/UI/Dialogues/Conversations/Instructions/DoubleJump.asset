@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb8f8057f7ee0de499d3cf1ac18f9ebd, type: 3}
+  m_Name: DoubleJump
+  m_EditorClassIdentifier: 
+  leftCharacter: {fileID: 11400000, guid: e3c6b1083eb3c1341af15169f5480adb, type: 2}
+  rightCharacter: {fileID: 11400000, guid: ba8f9525f5b152e42953cd4e88eca88d, type: 2}
+  sentences:
+  - character: {fileID: 11400000, guid: ba8f9525f5b152e42953cd4e88eca88d, type: 2}
+    text: Grr Grr grrrrr
+  - character: {fileID: 11400000, guid: e3c6b1083eb3c1341af15169f5480adb, type: 2}
+    text: I know it looks very high, but remember, you can jump higher than any of
+      us.
+  - character: {fileID: 11400000, guid: ba8f9525f5b152e42953cd4e88eca88d, type: 2}
+    text: Grr grr grrr
+  - character: {fileID: 11400000, guid: e3c6b1083eb3c1341af15169f5480adb, type: 2}
+    text: I'm not making this up, You can (Press double South Button to Jump Higher)

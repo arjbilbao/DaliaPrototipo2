@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd4c89604ce9f2b4191f58346a242b89, type: 3}
+  m_Name: BackGroundTilesSlot
+  m_EditorClassIdentifier: 
+  tiles:
+  - {fileID: 11400000, guid: 4de0fd4fde2d1604da9e27d65ddd5ba2, type: 2}
+  - {fileID: 11400000, guid: ea08207b3f04b10449343fdb8e2bd26e, type: 2}

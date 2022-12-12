@@ -45,6 +45,8 @@ public class OpenDoorButton : MonoBehaviour
                 TextMesh.enabled=false;
                 _GoButton.SetActive(true);
                 SetEventButton(_GoButton);
+
+                Debug.Log("Go Selected");
             }
             else{
                 _thisButton.enabled=true;
@@ -58,6 +60,8 @@ public class OpenDoorButton : MonoBehaviour
         SceneLoader.sceneToLoad=_DoorSO.sceneToLoad;
 
        }
+
+
             
     }
     private void OnDisable()

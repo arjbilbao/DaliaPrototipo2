@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 915993536858025266}
   - component: {fileID: 547410773101906380}
   - component: {fileID: 1937905139922713702}
+  - component: {fileID: -6832238844486480903}
   m_Layer: 0
   m_Name: Flor Dalia
   m_TagString: Untagged
@@ -115,6 +116,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _dalia: {fileID: 11400000, guid: 2459c03884d296e469f01cc5fb32b688, type: 2}
   _AlterAnimator: {fileID: 11400000, guid: c434088728a90a84cbd8c8f50408fc2f, type: 2}
+  level: {fileID: 11400000, guid: 8a02aa2f3c0faac4b9f19409b1688a28, type: 2}
+  levelChanger: {fileID: -6832238844486480903}
 --- !u!58 &1937905139922713702
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -131,3 +134,16 @@ CircleCollider2D:
   m_Offset: {x: -0.05447578, y: -0.016435254}
   serializedVersion: 2
   m_Radius: 0.6907574
+--- !u!114 &-6832238844486480903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4931022884223791771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5edb40b65c91396449be174c662acaa2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelManager: {fileID: 11400000, guid: 78df7003666c2d641a2745784341ef0d, type: 2}
