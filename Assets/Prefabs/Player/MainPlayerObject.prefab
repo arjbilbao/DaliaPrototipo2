@@ -688,6 +688,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47d1645349cbb444697a6f913c34a3be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jumpEvent: {fileID: 11400000, guid: 47fcff3524679a24f835a9ffd2fb699d, type: 2}
+  tonguing: {fileID: 11400000, guid: 40f77925eb91a354f8d255873ab973e8, type: 2}
   GSC: {fileID: 9106249753736053252}
   _paused: 0
   _pausedStated: {fileID: 11400000, guid: 6160977ccb6780d4f93d7d995002c6d5, type: 2}
@@ -730,6 +732,7 @@ MonoBehaviour:
   _canBreakGround: 0
   _dialogue: 0
   _isOnCinematic: 0
+  _FightEliad: 0
 --- !u!95 &310630455912580380
 Animator:
   serializedVersion: 3
@@ -838,6 +841,21 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   onDialogueState:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 310630455912580381}
+        m_TargetAssemblyTypeName: MainPlayerController, Assembly-CSharp
+        m_MethodName: OnDialogue
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  onCinemaState:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 310630455912580381}

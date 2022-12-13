@@ -11317,6 +11317,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7af6dd9712bb07c43a7a851e83d317f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Breaking: {fileID: 11400000, guid: ac64e753a3813c549b2c83e98a404258, type: 2}
   _explodable: {fileID: 4852011570665474087}
 --- !u!1 &4862936821721520035
 GameObject:

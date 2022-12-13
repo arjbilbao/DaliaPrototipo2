@@ -562,7 +562,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneToLoad: {fileID: 11400000, guid: bf297420a2c956e49ab41f16394c4e9c, type: 2}
-  levelEntrance: {fileID: 0}
+  levelEntrance: {fileID: 11400000, guid: 0430d171faf59fd4487c3509f8c0fb9b, type: 2}
   loadingScreen: 1
   playerPath: {fileID: 11400000, guid: fe890c5c455ffa641a791a5187bdc36d, type: 2}
   loadSceneEvent: {fileID: 11400000, guid: 4f10557af7e0f3145b2f9ee86504bacf, type: 2}

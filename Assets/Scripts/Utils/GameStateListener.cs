@@ -20,6 +20,7 @@ public class GameStateListener : MonoBehaviour
     public UnityEvent onPauseState;
     public UnityEvent onDoorOpeningState;
     public UnityEvent onDialogueState;
+    public UnityEvent onCinemaState;
 
     private void OnEnable()
     {
@@ -71,5 +72,7 @@ public class GameStateListener : MonoBehaviour
 
         if (newGameState.stateName == "Dialogue" && this.onDialogueState != null)
             this.onDialogueState.Invoke();
+            if (newGameState.stateName == "Cinema" && this.onCinemaState != null)
+            this.onCinemaState.Invoke();
     }
 }
