@@ -431,7 +431,14 @@ public class MainPlayerController : MonoBehaviour
             
         }
         if(_alter=="The Prisoner")
-        {           BreakingRun.Raise(true);
+
+
+        {           
+                if(leftstick.x!=0)
+                {
+                        BreakingRun.Raise(true);
+                }
+                
                 speed=300f;
                 _BreakTimer=+Time.deltaTime;
 
