@@ -50,7 +50,7 @@ public class InitialTilesTransitions : MonoBehaviour
                 DisclaimerTitle.SetActive(true);
                 DisclaimerContent.SetActive(true);
                 _disclaimer=true;
-                MaxTime=15f;
+                MaxTime=7f;
             }
 
              }
