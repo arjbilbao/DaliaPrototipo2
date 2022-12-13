@@ -16,8 +16,7 @@ MonoBehaviour:
   rightCharacter: {fileID: 11400000, guid: 42ad4892f5665cc42bea5ddf64c201d4, type: 2}
   sentences:
   - character: {fileID: 11400000, guid: e3c6b1083eb3c1341af15169f5480adb, type: 2}
-    text: He said out loud that we are going to be lobotomized.  Please, we need
-      to escape.
+    text: Please, we need to escape. He clearly said that we are getting lob...
   - character: {fileID: 11400000, guid: 42ad4892f5665cc42bea5ddf64c201d4, type: 2}
     text: Nonesense! You are making this up! You cannot accept I am the one who is
       right.
