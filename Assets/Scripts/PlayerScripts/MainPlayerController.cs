@@ -178,8 +178,9 @@ public class MainPlayerController : MonoBehaviour
     // Method called for character basic movement ---> Jumping
     private void Jumping()
     {
+            if(_dialogue==false){
 
-       _jumpsAvailable-=1;
+                    _jumpsAvailable-=1;
 
         if(_isGrounded||_isOnWall)
         {
@@ -193,6 +194,9 @@ public class MainPlayerController : MonoBehaviour
                 
             
         }
+
+            }
+       
      
 
         
