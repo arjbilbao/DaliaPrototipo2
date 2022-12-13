@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 658191c2dabcab647b90db6982aa11a0, type: 3}
   m_Name: Global Alter Manager
   m_EditorClassIdentifier: 
-  CurrentAlter: Eliad
+  CurrentAlter: Dalia
   Changing: 1
   AlterIndex: 0

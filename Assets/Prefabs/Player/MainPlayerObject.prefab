@@ -84,7 +84,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 310630453815646144}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.23, y: 0.36, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 310630455219521323}
@@ -291,8 +291,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 310630455219521320}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0068, y: 0.0271, z: 0}
-  m_LocalScale: {x: 2.5174441, y: 2.4100277, z: 1}
+  m_LocalPosition: {x: -0.287, y: -0.1848, z: 0}
+  m_LocalScale: {x: 8.239501, y: 6.5184603, z: 1}
   m_Children: []
   m_Father: {fileID: 310630453815646147}
   m_RootOrder: 0
@@ -729,6 +729,7 @@ MonoBehaviour:
   _transitionTime: 3
   _canBreakGround: 0
   _dialogue: 0
+  _isOnCinematic: 0
 --- !u!95 &310630455912580380
 Animator:
   serializedVersion: 3

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ebfa87b229ad2346870d6e7d975d6dd, type: 3}
   m_Name: GameManager
   m_EditorClassIdentifier: 
-  currentLevel: {fileID: 11400000, guid: de2f76af936015e41847ff19f8a02771, type: 2}
+  currentLevel: {fileID: 11400000, guid: 8a02aa2f3c0faac4b9f19409b1688a28, type: 2}
   levelChanged: {fileID: 11400000, guid: 1eebb48746bcd514ebce224b06324483, type: 2}

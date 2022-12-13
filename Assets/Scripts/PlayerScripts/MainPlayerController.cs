@@ -56,6 +56,8 @@ public class MainPlayerController : MonoBehaviour
           public bool _dialogue;
           public bool _isOnCinematic;
 
+          public bool _FightEliad=false;
+
 
 
     
@@ -284,7 +286,7 @@ public class MainPlayerController : MonoBehaviour
              
     }
     public void AlterIndexation()
-    {       if(_isPantuflaOn&&_isTonguelaunched==false&&_isTongueHeld==false)
+    {       if(_isPantuflaOn&&_isTonguelaunched==false&&_isTongueHeld==false&&_FightEliad==false)
                 {
                         _transitionEnabled=true;
                         GetComponent<SpriteRenderer>().color = new Color (1f,1f,1f,0f);

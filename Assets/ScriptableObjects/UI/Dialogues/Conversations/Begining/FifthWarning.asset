@@ -19,5 +19,4 @@ MonoBehaviour:
     text: If you keep going forward, we'll be sent to the Basement. That's not the
       way to escape, please!
   - character: {fileID: 11400000, guid: 42ad4892f5665cc42bea5ddf64c201d4, type: 2}
-    text: I won't listening to you anymore. You are not longer the owner of this
-      body.
+    text: I won't listen to you anymore. You are not longer the owner of this body.

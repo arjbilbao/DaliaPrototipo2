@@ -15,6 +15,38 @@ public class ChangingObjectBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        sr.sprite=_sprites[GAM.AlterIndex];
+        
+
+
+       SpriteSelector(GAM.CurrentAlter);
     }
+
+
+    private void SpriteSelector(string alter)
+             {
+                     switch(alter)
+        {
+
+            case "Eliad": sr.sprite=_sprites[0];
+            break;
+            case "The Prisoner":
+            sr.sprite=_sprites[1];
+            break;
+            case "The Outcast":
+            sr.sprite=_sprites[2];
+            break;
+            case "Lagartha":
+            sr.sprite=_sprites[3];
+            break;
+            case "The Doctor":
+            sr.sprite=_sprites[4];
+            break;
+            case "Dalia":
+            sr.sprite=_sprites[5];
+            break;
+
+            default: break;
+        }
+
+             }
 }
