@@ -242,7 +242,7 @@ public class MainPlayerController : MonoBehaviour
     }
     private void AnimatorMachineState()
     {
-            if(_isGrounded)
+            if(_isGrounded &&_paused==false&&_dialogue==false)
             {
                      if(leftstick.x!=0&&_isRat==false)
                     {
