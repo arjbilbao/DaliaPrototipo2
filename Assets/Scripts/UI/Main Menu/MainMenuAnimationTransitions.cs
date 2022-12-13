@@ -19,7 +19,7 @@ public class MainMenuAnimationTransitions : MonoBehaviour
         ps=GetComponent<ParticleSystem>();
         control=true;
         ps.Play();
-        _transitionEnabled=true;
+        //_transitionEnabled=true;
     }
 
     // Update is called once per frame

@@ -1426,6 +1426,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+  onCinemaState:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &566560068
 Transform:
   m_ObjectHideFlags: 0
@@ -1732,6 +1735,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   onDialogueState:
+    m_PersistentCalls:
+      m_Calls: []
+  onCinemaState:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &766011131
@@ -5123,12 +5129,36 @@ PrefabInstance:
     m_TransformParent: {fileID: 1041597441}
     m_Modifications:
     - target: {fileID: 479399322, guid: 7df800af4e561a645b11a5b502b86814, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 479399322, guid: 7df800af4e561a645b11a5b502b86814, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 479399322, guid: 7df800af4e561a645b11a5b502b86814, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 479399322, guid: 7df800af4e561a645b11a5b502b86814, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 479399322, guid: 7df800af4e561a645b11a5b502b86814, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 479399322, guid: 7df800af4e561a645b11a5b502b86814, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 214.37
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 479399322, guid: 7df800af4e561a645b11a5b502b86814, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 479399322, guid: 7df800af4e561a645b11a5b502b86814, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.063099
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 479399323, guid: 7df800af4e561a645b11a5b502b86814, type: 3}
       propertyPath: m_Color.b
