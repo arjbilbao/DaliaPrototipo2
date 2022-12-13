@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ca9d5916238c2942ad00dd7ded1dbe8, type: 3}
   m_Name: The Doctor
   m_EditorClassIdentifier: 
-  fullname: 
-  portrait: {fileID: 0}
+  fullname: The Doctor
+  portrait: {fileID: 21300000, guid: 3d6c490442e0c9b4c968eaf20cd071dd, type: 3}

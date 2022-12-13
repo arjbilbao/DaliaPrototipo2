@@ -23,7 +23,7 @@ MonoBehaviour:
     text: Just as a reminder! Any time you see a duct entrance, a rat can jump over
       there
   - character: {fileID: 11400000, guid: 8af3c459f58564d46b565f828d82268e, type: 2}
-    text: I know that as well! Don't you remember my mind and they're mind are like
+    text: I know that as well! Don't you remember my mind and their mind are like
       one (Press East Button to Switch between The Outcast and the Rat)
   - character: {fileID: 11400000, guid: e3c6b1083eb3c1341af15169f5480adb, type: 2}
     text: 'And remember: They can use us to climb to higher places (Press Leftstick

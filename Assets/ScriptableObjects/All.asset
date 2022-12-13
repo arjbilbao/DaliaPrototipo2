@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40cd6d48d1aaeaf4bbf5aec035571b2e, type: 3}
+  m_Name: All
+  m_EditorClassIdentifier: 
+  Container:
+  - _animator: {fileID: 9100000, guid: 7f2794b7e55b3ab45b5b6d01029109da, type: 2}
+    CanBeUsed: 0
+    index: 0
+    name: The Prisoner
+    Pic: {fileID: 21300000, guid: 730cc833d0c4ece4697cf2ac14b247dc, type: 3}
+    BackGround: {fileID: 21300000, guid: 125887b503c5f974e9cb5496464f875d, type: 3}
+    Tile: {fileID: 11400000, guid: 4de0fd4fde2d1604da9e27d65ddd5ba2, type: 2}
+  - _animator: {fileID: 22100000, guid: 8837ef248e5594f4faa825bb02c0d29a, type: 2}
+    CanBeUsed: 0
+    index: 1
+    name: The Outcast
+    Pic: {fileID: 21300000, guid: 148e37eec5c720c49a5eeb13d13d1c34, type: 3}
+    BackGround: {fileID: 21300000, guid: 5161490c00232764687c95c0947a6e02, type: 3}
+    Tile: {fileID: 11400000, guid: ea08207b3f04b10449343fdb8e2bd26e, type: 2}
+  - _animator: {fileID: 22100000, guid: 3252ee0e38803b742bd102b2c47b19af, type: 2}
+    CanBeUsed: 0
+    index: 2
+    name: Lagartha
+    Pic: {fileID: 21300000, guid: 33304b3483557d649abcba84ccae347a, type: 3}
+    BackGround: {fileID: 21300000, guid: b5e47bc28c0357145997b55d44183583, type: 3}
+    Tile: {fileID: 11400000, guid: c6822f9007036d3428afecf2ac7719a9, type: 2}
+  - _animator: {fileID: 22100000, guid: 244e1f624e7cfd747b1753274a72efee, type: 2}
+    CanBeUsed: 0
+    index: 3
+    name: The Doctor
+    Pic: {fileID: 21300000, guid: 3d6c490442e0c9b4c968eaf20cd071dd, type: 3}
+    BackGround: {fileID: 21300000, guid: 997e9e41d362010419e6d1157eddf131, type: 3}
+    Tile: {fileID: 11400000, guid: 258a5651fc4822c40b4d8b45dab521da, type: 2}
+  - _animator: {fileID: 22100000, guid: 3f02caa189452404490a5c4f384f2937, type: 2}
+    CanBeUsed: 1
+    index: 4
+    name: Dalia
+    Pic: {fileID: 21300000, guid: d3d1a99e2433e9a41a3f6543384b0781, type: 3}
+    BackGround: {fileID: 21300000, guid: 1ad6ff19645d527428ffe03f31b8fe99, type: 3}
+    Tile: {fileID: 11400000, guid: e00a294677bcbe1418179f130758df30, type: 2}
+  - _animator: {fileID: 22100000, guid: b9658052620711945a96cade7419ac64, type: 2}
+    CanBeUsed: 1
+    index: 5
+    name: Eliad
+    Pic: {fileID: 21300000, guid: aafbabccf4d4dba40bda23fbbfca4ba2, type: 3}
+    BackGround: {fileID: 21300000, guid: ea5cdfcfb2ae27d43b02100aaa8a4847, type: 3}
+    Tile: {fileID: 11400000, guid: 243bcd71bf2376e44ada325a7704412b, type: 2}
