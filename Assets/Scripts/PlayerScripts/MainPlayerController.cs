@@ -87,9 +87,9 @@ public class MainPlayerController : MonoBehaviour
          controls.Pcontroller.South.performed += ctx => Jumping();
          controls.Pcontroller.North.performed += ctx => AlterIndexation();
 
-          controls.Pcontroller.RB.started += ctx => _isTonguelaunched = true;
+          controls.Pcontroller.RB.started += ctx => TongueFunction();
           
-          controls.Pcontroller.RB.started += ctx => _isTongueHeld = true;
+          controls.Pcontroller.RB.started += ctx => TongueHodling();
           controls.Pcontroller.RB.canceled += ctx => _isTongueHeld = false;
 
 
@@ -204,8 +204,12 @@ public class MainPlayerController : MonoBehaviour
 
     private void TongueHodling()
     {
+                if(_alter=="Lagartha")
+                {
+                        _isTongueHeld=true;
 
-            _isTongueHeld=true;
+                }
+            
     }
    
 
@@ -280,7 +284,14 @@ public class MainPlayerController : MonoBehaviour
        
     }
 
-  
+        private void TongueFunction()
+        {
+
+            if(_alter=="Lagartha")
+            {
+                    _isTonguelaunched=true;
+            }
+        }
     public void AlterChanger()
     {
             _animator.runtimeAnimatorController =SO_AlterAnimator.Container[alterIndex]._animator;
