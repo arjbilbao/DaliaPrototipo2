@@ -6,6 +6,7 @@ using ScriptableObjectArchitecture;
 public class ExplodeOnClick : MonoBehaviour {
 	 [Header("Broadcasting on channels")]
         public BoolGameEvent Breaking;
+		public BoolGameEvent StopRunning;
 	public Explodable _explodable;
 	private float _thisIsTime,_highJump;
 
@@ -31,6 +32,7 @@ public class ExplodeOnClick : MonoBehaviour {
 					_explodable.explode();
 					ExplosionForce ef = GameObject.FindObjectOfType<ExplosionForce>();
 					Breaking.Raise(true);
+					StopRunning.Raise(false);
 						//ef.doExplosion(transform.position);
 				}
 
@@ -39,6 +41,7 @@ public class ExplodeOnClick : MonoBehaviour {
 						_explodable.explode();
 					ExplosionForce ef = GameObject.FindObjectOfType<ExplosionForce>();
 					Breaking.Raise(true);
+					StopRunning.Raise(false);
 
 				}
 				

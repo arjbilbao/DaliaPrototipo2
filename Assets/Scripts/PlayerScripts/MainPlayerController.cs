@@ -13,6 +13,7 @@ public class MainPlayerController : MonoBehaviour
         [Header("Broadcasting on channels")]
         public BoolGameEvent jumpEvent;
         public BoolGameEvent tonguing;
+        public BoolGameEvent BreakingRun;
          [Header("Global Variables")]
         public GameStateChanger GSC;
         public bool _paused=false;
@@ -109,6 +110,7 @@ public class MainPlayerController : MonoBehaviour
           controls.Pcontroller.West.canceled += ctx =>speed=150f;
           controls.Pcontroller.West.canceled += ctx =>_BreakTimer=0f;
           controls.Pcontroller.West.canceled += ctx =>_canBreakGround=false;
+          controls.Pcontroller.West.canceled += ctx => BreakingRun.Raise(false);
 
 
         
@@ -186,17 +188,24 @@ public class MainPlayerController : MonoBehaviour
     private void Jumping()
     {
             if(_dialogue==false){
-                                        jumpEvent.Raise(true);
+                                       
                     _jumpsAvailable-=1;
 
         if(_isGrounded||_isOnWall)
-        {
+        {    
 
              _jumpsAvailable=_maxJumps;
         }
 
         if(_jumpsAvailable>0)
-        {       
+        {        
+            
+                    if(_isRat==false)
+                    {
+                              jumpEvent.Raise(true);
+
+                    }
+                  
                 rb.AddForce(Vector2.up*(jumpForce-rb.velocity.y) , ForceMode2D.Impulse);
                 
             
@@ -422,7 +431,7 @@ public class MainPlayerController : MonoBehaviour
             
         }
         if(_alter=="The Prisoner")
-        {
+        {           BreakingRun.Raise(true);
                 speed=300f;
                 _BreakTimer=+Time.deltaTime;
 

@@ -11318,6 +11318,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Breaking: {fileID: 11400000, guid: ac64e753a3813c549b2c83e98a404258, type: 2}
+  StopRunning: {fileID: 11400000, guid: b45c655bacea1374e91ce32ff71825c8, type: 2}
   _explodable: {fileID: 4852011570665474087}
 --- !u!1 &4862936821721520035
 GameObject:
