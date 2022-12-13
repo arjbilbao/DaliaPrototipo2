@@ -110,7 +110,7 @@ public class MainPlayerController : MonoBehaviour
           controls.Pcontroller.West.canceled += ctx =>speed=150f;
           controls.Pcontroller.West.canceled += ctx =>_BreakTimer=0f;
           controls.Pcontroller.West.canceled += ctx =>_canBreakGround=false;
-          controls.Pcontroller.West.canceled += ctx => BreakingRun.Raise(false);
+          
 
 
         
