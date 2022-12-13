@@ -32,7 +32,7 @@ public class ExplodeOnClick : MonoBehaviour {
 					_explodable.explode();
 					ExplosionForce ef = GameObject.FindObjectOfType<ExplosionForce>();
 					Breaking.Raise(true);
-					StopRunning.Raise(false);
+				
 						//ef.doExplosion(transform.position);
 				}
 
@@ -41,7 +41,7 @@ public class ExplodeOnClick : MonoBehaviour {
 						_explodable.explode();
 					ExplosionForce ef = GameObject.FindObjectOfType<ExplosionForce>();
 					Breaking.Raise(true);
-					StopRunning.Raise(false);
+					
 
 				}
 				
