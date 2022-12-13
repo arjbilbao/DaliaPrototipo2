@@ -3,10 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Cinemachine;
+using ScriptableObjectArchitecture;
+
 
 
 public class MainPlayerController : MonoBehaviour
 {   //Global variables
+        
+        [Header("Broadcasting on channels")]
+        public BoolGameEvent jumpEvent;
+        public BoolGameEvent tonguing;
+         [Header("Global Variables")]
         public GameStateChanger GSC;
         public bool _paused=false;
         public GameStateSO _pausedStated;
@@ -179,7 +186,7 @@ public class MainPlayerController : MonoBehaviour
     private void Jumping()
     {
             if(_dialogue==false){
-
+                                        jumpEvent.Raise(true);
                     _jumpsAvailable-=1;
 
         if(_isGrounded||_isOnWall)
@@ -290,6 +297,7 @@ public class MainPlayerController : MonoBehaviour
             if(_alter=="Lagartha")
             {
                     _isTonguelaunched=true;
+                    tonguing.Raise(true);
             }
         }
     public void AlterChanger()

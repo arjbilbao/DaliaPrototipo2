@@ -1,9 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
+using ScriptableObjectArchitecture;
 
 [RequireComponent(typeof(Explodable))]
 public class ExplodeOnClick : MonoBehaviour {
-
+	 [Header("Broadcasting on channels")]
+        public BoolGameEvent Breaking;
 	public Explodable _explodable;
 	private float _thisIsTime,_highJump;
 
@@ -28,6 +30,7 @@ public class ExplodeOnClick : MonoBehaviour {
 
 					_explodable.explode();
 					ExplosionForce ef = GameObject.FindObjectOfType<ExplosionForce>();
+					Breaking.Raise(true);
 						//ef.doExplosion(transform.position);
 				}
 
@@ -35,6 +38,7 @@ public class ExplodeOnClick : MonoBehaviour {
 				{	GetComponent<Rigidbody2D>().bodyType=RigidbodyType2D.Dynamic;
 						_explodable.explode();
 					ExplosionForce ef = GameObject.FindObjectOfType<ExplosionForce>();
+					Breaking.Raise(true);
 
 				}
 				
